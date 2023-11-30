@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:state_management/provider/auth_provider.dart';
 import 'package:state_management/provider/count_provider.dart';
 //import 'package:state_management/provider/count_provider.dart';
 import 'package:state_management/provider/exampleoneProvider.dart';
 import 'package:state_management/provider/favourite_provider.dart';
 import 'package:state_management/provider/theme_changer_provider.dart';
 //import 'package:state_management/screen/dark_theme/dark_theme.dart';
-import 'package:state_management/screen/favourite/value_notify_listener.dart';
+//import 'package:state_management/screen/favourite/value_notify_listener.dart';
+import 'package:state_management/screen/login/login_screen.dart';
 //import 'package:state_management/lecture1.dart';
 //import 'package:state_management/lecture2.dart';
 //import 'package:state_management/lecture3.dart';
@@ -33,6 +35,8 @@ class MyApp extends StatelessWidget {
           create: (_)=> FavouriteItemProvider()),
         ChangeNotifierProvider(
           create: (_)=> ThemeChanger()),
+        ChangeNotifierProvider(
+          create: (_)=> AuthProvider()),
       ],
       child:  Builder(
         builder: (context) {
@@ -53,7 +57,7 @@ class MyApp extends StatelessWidget {
                 backgroundColor: Colors.teal
               )
             ),
-            home: NotifyListenerScreen(),
+            home: const LoginScreen(),
           );
         }
       ),
