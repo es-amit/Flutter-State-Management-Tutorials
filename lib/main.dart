@@ -5,7 +5,8 @@ import 'package:state_management/provider/count_provider.dart';
 import 'package:state_management/provider/exampleoneProvider.dart';
 import 'package:state_management/provider/favourite_provider.dart';
 import 'package:state_management/provider/theme_changer_provider.dart';
-import 'package:state_management/screen/dark_theme/dark_theme.dart';
+//import 'package:state_management/screen/dark_theme/dark_theme.dart';
+import 'package:state_management/screen/favourite/value_notify_listener.dart';
 //import 'package:state_management/lecture1.dart';
 //import 'package:state_management/lecture2.dart';
 //import 'package:state_management/lecture3.dart';
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
                 backgroundColor: Colors.teal
               )
             ),
-            home: const DarkThemeScreen(),
+            home: NotifyListenerScreen(),
           );
         }
       ),
