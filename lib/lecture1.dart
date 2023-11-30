@@ -1,15 +1,37 @@
 import 'package:flutter/material.dart';
 
-class Lecture1 extends StatefulWidget {
+class Lecture1 extends StatelessWidget {
   const Lecture1({super.key});
 
-  @override
-  State<Lecture1> createState() => _Lecture1State();
-}
-
-class _Lecture1State extends State<Lecture1> {
+  static int x =10;
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("provider tutorials"),
+        centerTitle: true,
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            child: Center(
+              child: Text(x.toString(),
+                style: const TextStyle(
+                  fontSize: 50
+                ),),
+            ),
+          )
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          x++;
+          print(x);
+        },
+        child: const Icon(Icons.add),
+        ),
+    );
   }
 }
